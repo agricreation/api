@@ -6,6 +6,7 @@ const hkrAgriTechs = ('/hkragritechs', (req,res)=>{
             {id:1, title: "Latest", url:"https://youtube.com/hkragritechsYT"},
             {id:1, title: "Latest", url:"https://youtube.com/hkragritechsYT"},
             {id:1, title: "Latest", url:"https://youtube.com/hkragritechsYT"},
+            {id:1, title: "Latest", url:"https://youtube.com/hkragritechsYT"},
         ]
     }
     res.json(jsonData);
