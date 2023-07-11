@@ -1,15 +1,8 @@
-
-const hkrAgriTechs = ('/hkragritechs', (req,res)=>{
-    const jsonData = {
-        latestVideos : [
-            {id:1, title: "Latest", url:"https://youtube.com/hkragritechsYT"},
-            {id:1, title: "Latest", url:"https://youtube.com/hkragritechsYT"},
-            {id:1, title: "Latest", url:"https://youtube.com/hkragritechsYT"},
-            {id:1, title: "Latest", url:"https://youtube.com/hkragritechsYT"},
-            {id:1, title: "Latest", url:"https://youtube.com/hkragritechsYT"},
-        ]
-    }
-    res.json(jsonData);
-})
-
+const path = require('path');
+const filePath = path.resolve(__dirname, './data/hkragritechs.json');
+console.log(filePath);
+const hkrAgriTechs = (req, res) => {
+    res.sendFile(filePath)
+};
 module.exports = hkrAgriTechs;
+
