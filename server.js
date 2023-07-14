@@ -5,12 +5,7 @@ const cors = require('cors');
 const {getContentFromYoutubeHkragritechs, getContentFromYoutubeBestappsintamil} = require('./controller/youtube');
 app.use(cors());
 
-//Refreshing api for hkragritechs
-  setInterval(()=>{
-      getContentFromYoutubeHkragritechs();
-      getContentFromYoutubeBestappsintamil();
-      console.log("Updating content");
-}, 3600000);
+
 
 //Importing controllers
 const hkrAgriTechs = require('./controller/hkragritechs');
@@ -28,3 +23,9 @@ app.listen('1000',()=>{
     console.log("Server listening on port 1000");
 })
 
+//Refreshing api for hkragritechs
+setInterval(()=>{
+      getContentFromYoutubeHkragritechs();
+      getContentFromYoutubeBestappsintamil();
+      console.log("Updating content");
+}, 3600000);
